@@ -10,5 +10,12 @@ pipeline {
             }
         }
 
+        stage('Docker Build') {
+            steps {
+                echo 'Building Docker Image...'
+                sh 'docker build -f Dockerfile -t saving-service .'
+            }
+        }
+
     }
 }
