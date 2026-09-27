@@ -83,9 +83,11 @@ public class SecurityConfig {
 @Bean
 public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration configuration = new CorsConfiguration();
-
     configuration.setAllowedOrigins(
-            List.of("http://localhost:4200")
+            List.of(
+                    "http://localhost:4200",
+                    "https://savings-ui.vercel.app"
+            )
     );
 
     configuration.setAllowedMethods(
